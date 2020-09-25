@@ -1,7 +1,8 @@
-const sgMail = require('@sendgrid/mail')
+const sgMail = require('@sendgrid/mail')        //importing sendgrid npm
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)  //setting API key for current app
 
+//function to send welcome email
 const sendWelcomeEmail = (email, name) => {
     sgMail.send({
         to: email,
@@ -11,6 +12,7 @@ const sendWelcomeEmail = (email, name) => {
     })
 }
 
+//function to send cancellation email
 const sendCancellationEmail = (email, name) => {
     sgMail.send({
         to: email,
