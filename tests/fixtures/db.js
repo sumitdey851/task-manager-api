@@ -49,11 +49,11 @@ const taskThree = {
 }
 
 const setupDatabase = async () => {
-    await User.deleteMany()                             //cleanup database
+    await User.deleteMany()                             //cleanup user collection
     await new User(userOne).save()                     //save dummy users to database
     await new User(userTwo).save()
-    await Task.deleteMany()
-    await new Task(taskOne).save()
+    await Task.deleteMany()                             //cleanup task collection
+    await new Task(taskOne).save()                      //save dummy tasks to database
     await new Task(taskTwo).save()
     await new Task(taskThree).save()
 }

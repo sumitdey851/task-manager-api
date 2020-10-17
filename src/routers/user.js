@@ -1,6 +1,6 @@
 const express = require('express')  
 const multer = require('multer')            //importing file-upload npm
-const sharp = require('sharp')
+const sharp = require('sharp')              //npm for image manipulation
 const User = require('../models/user')      //importing user model
 const auth = require('../middleware/auth')  //importing authentication middleware
 const { sendWelcomeEmail, sendCancellationEmail } = require('../emails/account')
